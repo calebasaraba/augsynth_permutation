@@ -281,13 +281,13 @@ extract_covariates <- function(form, unit, time, t_int, data, cov_agg) {
     }
 
     # check if any covariates have no variation
-    Zsds <- apply(Z, 2, sd)
+    # Zsds <- apply(Z, 2, sd)
 
-    if(any(Zsds == 0)) {
-      zero_covs <- paste(colnames(Z)[Zsds == 0], collapse = ", ")
-      stop(paste("The following covariates have no variation across units:",
-                 zero_covs))
-    }
+    #if(any(Zsds == 0)) {
+    #  zero_covs <- paste(colnames(Z)[Zsds == 0], collapse = ", ")
+    #  stop(paste("The following covariates have no variation across units:",
+    #             zero_covs))
+    #}
     return(Z)
 }
 
